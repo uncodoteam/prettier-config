@@ -18,7 +18,7 @@ jobs:
 
           scope: '@uncodoteam'
       - name: Install dependencies
-        run: npm
+        run: npm ci
       - name: Publish package
         run: npm publish --access restricted
         env:

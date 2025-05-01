@@ -22,12 +22,12 @@ jobs:
           scope: '@uncodoteam'
 
       - run: npm ci
-        working-directory: packages/package-name
+        working-directory: ./
 
       - run: npm run build
-        working-directory: packages/package-name
+        working-directory: ./
 
       - run: npm publish --access restricted
-        working-directory: packages/package-name
+        working-directory: ./
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

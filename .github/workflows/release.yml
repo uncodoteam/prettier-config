@@ -11,17 +11,23 @@ jobs:
     permissions:
       contents: read
       packages: write
+
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: 'https://npm.pkg.github.com'
           scope: '@uncodoteam'
-      - run: npm install
-        working-directory: packages/package-path
-      - run: npm build
+
+      - run: npm ci
         working-directory: packages/package-name
-      - run: npm publish packages/package-name --access restricted
+
+      - run: npm run build
+        working-directory: packages/package-name
+
+      - run: npm publish --access restricted
+        working-directory: packages/package-name
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

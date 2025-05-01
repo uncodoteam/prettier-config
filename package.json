@@ -1,5 +1,5 @@
 {
-  "name": "@uncodo/prettier-config",
+  "name": "@uncodoteam/prettier-config",
   "version": "1.0.0",
   "description": "Uncodo prettier config",
   "files": [
@@ -7,15 +7,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint": "npm run prettier -- --check",
     "write": "npm run prettier -- --write",
     "prettier": "prettier '**/*.{json,html,md,css,ts,tsx,js,jsx}'",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "publish": "NPM_TOKEN=$NPM_TOKEN npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nickxsy/prettier-config.git"
+    "url": "git+https://github.com/uncodoteam/prettier-config.git"
   },
   "keywords": [
     "prettier",
@@ -23,14 +24,17 @@
   ],
   "author": "",
   "bugs": {
-    "url": "https://github.com/nickxsy/prettier-config/issues"
+    "url": "https://github.com/uncodoteam/prettier-config/issues"
   },
   "lint-staged": {
     "*.{json,html,md,css,ts,tsx,js,jsx}": [
       "prettier --write"
     ]
   },
-  "homepage": "https://github.com/nickxsy/prettier-config#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "homepage": "https://github.com/uncodoteam/prettier-config#readme",
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",

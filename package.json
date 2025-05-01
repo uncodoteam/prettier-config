@@ -1,6 +1,6 @@
 {
   "name": "@uncodoteam/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uncodo prettier config",
   "files": [
     "index.js"
@@ -25,6 +25,7 @@
   "bugs": {
     "url": "https://github.com/uncodoteam/prettier-config/issues"
   },
+  "private": false,
   "lint-staged": {
     "*.{json,html,md,css,ts,tsx,js,jsx}": [
       "prettier --write"

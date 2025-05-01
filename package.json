@@ -11,8 +11,7 @@
     "lint": "npm run prettier -- --check",
     "write": "npm run prettier -- --write",
     "prettier": "prettier '**/*.{json,html,md,css,ts,tsx,js,jsx}'",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "publish": "NPM_TOKEN=$NPM_TOKEN npm publish"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",

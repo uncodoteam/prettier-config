@@ -1,0 +1,39 @@
+{
+  "name": "@uncodo/prettier-config",
+  "version": "1.0.0",
+  "description": "Uncodo prettier config",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "npm run prettier -- --check",
+    "write": "npm run prettier -- --write",
+    "prettier": "prettier '**/*.{json,html,md,css,ts,tsx,js,jsx}'",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickxsy/prettier-config.git"
+  },
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/nickxsy/prettier-config/issues"
+  },
+  "lint-staged": {
+    "*.{json,html,md,css,ts,tsx,js,jsx}": [
+      "prettier --write"
+    ]
+  },
+  "homepage": "https://github.com/nickxsy/prettier-config#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
+  }
+}

@@ -8,10 +8,10 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
-    "lint": "npm run prettier -- --check",
-    "write": "npm run prettier -- --write",
-    "prettier": "prettier '**/*.{json,html,md,css,ts,tsx,js,jsx}'",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "publish": "npm publish",
+    "pre-commit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "private": false,
   "lint-staged": {
     "*.{json,html,md,css,ts,tsx,js,jsx}": [
-      "prettier --write"
+      "npm run format"
     ]
   },
   "peerDependencies": {
